@@ -1,45 +1,54 @@
-/* ── Reset global estilo Apple ── */
-*, *::before, *::after {
+/* ── Reset y Base Global del Sistema ── */
+*,
+*::before,
+*::after {
 	box-sizing: border-box;
 	margin: 0;
 	padding: 0;
 }
 
-html, body {
+html,
+body {
 	width: 100%;
 	height: 100%;
-	background: #000;
-	color: #f5f5f7;
-	font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'SF Pro Display', system-ui, sans-serif;
+	background: #090a0f;
+	color: #e2e4e9;
+	font-family:
+		'Inter',
+		-apple-system,
+		BlinkMacSystemFont,
+		'Segoe UI',
+		Roboto,
+		sans-serif;
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
 	overflow-x: hidden;
-	scroll-behavior: smooth;
+	color-scheme: dark;
 }
 
-/* Elimina el borde/outline de foco por defecto en todos los elementos */
+/* Foco accesible y visible */
 :focus-visible {
-	outline: 2px solid rgba(182, 145, 76, 0.6);
+	outline: 2px solid #b6914c;
 	outline-offset: 2px;
 }
 
-/* Scrollbar global al estilo macOS */
+/* Scrollbar sutil y profesional */
 ::-webkit-scrollbar {
 	width: 6px;
 	height: 6px;
 }
 ::-webkit-scrollbar-track {
-	background: transparent;
+	background: #090a0f;
 }
 ::-webkit-scrollbar-thumb {
-	background: rgba(255, 255, 255, 0.12);
-	border-radius: 4px;
+	background: #232838;
+	border-radius: 3px;
 }
 ::-webkit-scrollbar-thumb:hover {
-	background: rgba(255, 255, 255, 0.22);
+	background: #343c52;
 }
 
-/* Links sin decoración por defecto */
+/* Links sin decoración */
 a {
 	color: inherit;
 	text-decoration: none;
@@ -51,7 +60,10 @@ img {
 	display: block;
 }
 
-/* Botones heredan fuente */
-button, input, select, textarea {
+/* Heredar tipografía en controles de formulario */
+button,
+input,
+select,
+textarea {
 	font-family: inherit;
 }

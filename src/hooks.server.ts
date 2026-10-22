@@ -11,6 +11,9 @@ const handleBetterAuth: Handle = async ({ event, resolve }) => {
 		event.locals.user = session.user;
 	}
 
+	event.locals.auth = () =>
+		event.locals.session ? { user: event.locals.user, session: event.locals.session } : null;
+
 	return svelteKitHandler({ event, resolve, auth, building });
 };
 

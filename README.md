@@ -68,4 +68,3 @@ DATABASE_URL="postgresql://postgres:postgres@localhost:5432/imperio_db"
 - `npm run docker:reset`: Reinicia la base de datos desde cero (elimina volumen y vuelve a ejecutar la inicialización de tablas).
 - `npm run db:push:local`: Sincroniza directamente las modificaciones del esquema Drizzle hacia la base de datos local en Docker.
 - `npm run db:studio`: Abre la interfaz gráfica web de Drizzle Studio para ver y manipular registros.
-

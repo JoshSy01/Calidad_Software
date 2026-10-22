@@ -19,6 +19,7 @@
 		"auth:schema": "auth generate --config src/lib/server/auth.ts --output src/lib/server/db/auth.schema.ts --yes",
 		"db:push:local": "drizzle-kit push --schema=./src/lib/server/db/schema.ts --dialect=postgresql --url=postgresql://postgres:postgres@localhost:5432/imperio_db --force",
 		"db:seed": "node scripts/seed-user.js",
+		"test:pdca": "node scripts/test-pdca.mjs",
 		"docker:up": "docker compose up -d",
 		"docker:down": "docker compose down",
 		"docker:reset": "docker compose down -v && docker compose up -d"

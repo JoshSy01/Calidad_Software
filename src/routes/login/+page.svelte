@@ -13,14 +13,23 @@
 	<meta name="description" content="Accede a tu cuenta en Imperio." />
 	<link rel="preconnect" href="https://fonts.googleapis.com" />
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="anonymous" />
-	<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+	<link
+		href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap"
+		rel="stylesheet"
+	/>
 </svelte:head>
 
 <div class="login-wrapper">
 	<div class="login-card">
 		<!-- Logo / Marca -->
 		<div class="brand">
-			<img src="https://res.cloudinary.com/b6k3zfto/image/upload/v1788471377/logo.png" width="64" height="64" alt="Imperio" class="brand-logo">
+			<img
+				src="https://res.cloudinary.com/b6k3zfto/image/upload/v1788471377/logo.png"
+				width="64"
+				height="64"
+				alt="Imperio"
+				class="brand-logo"
+			/>
 		</div>
 
 		<div class="card-header">
@@ -30,10 +39,17 @@
 
 		{#if form?.error}
 			<div class="error-alert" role="alert">
-				<svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-					<circle cx="12" cy="12" r="10"/>
-					<line x1="12" y1="8" x2="12" y2="12"/>
-					<line x1="12" y1="16" x2="12.01" y2="16"/>
+				<svg
+					width="15"
+					height="15"
+					viewBox="0 0 24 24"
+					fill="none"
+					stroke="currentColor"
+					stroke-width="2"
+				>
+					<circle cx="12" cy="12" r="10" />
+					<line x1="12" y1="8" x2="12" y2="12" />
+					<line x1="12" y1="16" x2="12.01" y2="16" />
 				</svg>
 				{form.error}
 			</div>
@@ -50,13 +66,47 @@
 				};
 			}}
 		>
+			<div class="field">
+				<label for="email">Correo electrónico</label>
+				<div class="input-wrapper">
+					<svg
+						class="input-icon"
+						width="16"
+						height="16"
+						viewBox="0 0 24 24"
+						fill="none"
+						stroke="currentColor"
+						stroke-width="2"
+					>
+						<path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" />
+						<polyline points="22,6 12,13 2,6" />
+					</svg>
+					<input
+						id="email"
+						name="email"
+						type="email"
+						value="joshuajvb0@gmail.com"
+						placeholder="ejemplo@correo.com"
+						autocomplete="username"
+						required
+					/>
+				</div>
+			</div>
 
 			<div class="field">
 				<label for="password">Contraseña</label>
 				<div class="input-wrapper">
-					<svg class="input-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-						<rect x="3" y="11" width="18" height="11" rx="2" ry="2"/>
-						<path d="M7 11V7a5 5 0 0 1 10 0v4"/>
+					<svg
+						class="input-icon"
+						width="16"
+						height="16"
+						viewBox="0 0 24 24"
+						fill="none"
+						stroke="currentColor"
+						stroke-width="2"
+					>
+						<rect x="3" y="11" width="18" height="11" rx="2" ry="2" />
+						<path d="M7 11V7a5 5 0 0 1 10 0v4" />
 					</svg>
 					<input
 						id="password"
@@ -73,19 +123,42 @@
 						aria-label={showPassword ? 'Ocultar contraseña' : 'Mostrar contraseña'}
 					>
 						{#if showPassword}
-							<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-								<path d="M17.94 17.94A10.07 10.07 0 0 1 12 20c-7 0-11-8-11-8a18.45 18.45 0 0 1 5.06-5.94"/>
-								<path d="M9.9 4.24A9.12 9.12 0 0 1 12 4c7 0 11 8 11 8a18.5 18.5 0 0 1-2.16 3.19"/>
-								<line x1="1" y1="1" x2="23" y2="23"/>
+							<svg
+								width="16"
+								height="16"
+								viewBox="0 0 24 24"
+								fill="none"
+								stroke="currentColor"
+								stroke-width="2"
+							>
+								<path
+									d="M17.94 17.94A10.07 10.07 0 0 1 12 20c-7 0-11-8-11-8a18.45 18.45 0 0 1 5.06-5.94"
+								/>
+								<path d="M9.9 4.24A9.12 9.12 0 0 1 12 4c7 0 11 8 11 8a18.5 18.5 0 0 1-2.16 3.19" />
+								<line x1="1" y1="1" x2="23" y2="23" />
 							</svg>
 						{:else}
-							<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-								<path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/>
-								<circle cx="12" cy="12" r="3"/>
+							<svg
+								width="16"
+								height="16"
+								viewBox="0 0 24 24"
+								fill="none"
+								stroke="currentColor"
+								stroke-width="2"
+							>
+								<path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z" />
+								<circle cx="12" cy="12" r="3" />
 							</svg>
 						{/if}
 					</button>
 				</div>
+			</div>
+
+			<div
+				style="font-size: 0.75rem; color: rgba(255, 255, 255, 0.45); margin-bottom: 0.85rem; line-height: 1.4; background: rgba(255,255,255,0.03); padding: 0.5rem 0.75rem; border-radius: 8px; border: 1px solid rgba(255,255,255,0.06);"
+			>
+				<div><strong>Usuario:</strong> joshuajvb0@gmail.com</div>
+				<div><strong>Contraseña:</strong> Pruebas123</div>
 			</div>
 
 			<button id="login-submit" type="submit" class="btn-primary" disabled={loading}>
@@ -101,44 +174,52 @@
 </div>
 
 <style>
-	*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+	*,
+	*::before,
+	*::after {
+		box-sizing: border-box;
+		margin: 0;
+		padding: 0;
+	}
 
 	.login-wrapper {
 		min-height: 100vh;
 		display: flex;
 		align-items: center;
 		justify-content: center;
-		background: #000;
+		background: #090a0f;
 		position: relative;
-		font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'SF Pro Display', system-ui, sans-serif;
+		font-family:
+			'Inter',
+			-apple-system,
+			BlinkMacSystemFont,
+			'Segoe UI',
+			Roboto,
+			sans-serif;
 		padding: 1.5rem;
+		box-sizing: border-box;
 	}
 
 	.login-card {
 		position: relative;
 		width: 100%;
-		max-width: 400px;
-		background: #111;
-		border: 1px solid rgba(255, 255, 255, 0.1);
-		border-radius: 20px;
-		padding: 2.75rem 2.25rem;
-		animation: slideUp 0.45s cubic-bezier(0.16, 1, 0.3, 1) both;
-	}
-
-	@keyframes slideUp {
-		from { opacity: 0; transform: translateY(24px); }
-		to   { opacity: 1; transform: translateY(0); }
+		max-width: 410px;
+		background: #11141c;
+		border: 1px solid #1f2433;
+		border-radius: 8px;
+		padding: 2.25rem 2rem;
+		box-shadow: 0 16px 36px rgba(0, 0, 0, 0.6);
 	}
 
 	.brand {
 		display: flex;
 		align-items: center;
 		justify-content: center;
-		margin-bottom: 2rem;
+		margin-bottom: 1.5rem;
 	}
 
 	.brand-logo {
-		border-radius: 16px;
+		border-radius: 8px;
 		display: block;
 	}
 
@@ -175,9 +256,16 @@
 	}
 
 	@keyframes shake {
-		0%, 100% { transform: translateX(0); }
-		25%       { transform: translateX(-4px); }
-		75%       { transform: translateX(4px); }
+		0%,
+		100% {
+			transform: translateX(0);
+		}
+		25% {
+			transform: translateX(-4px);
+		}
+		75% {
+			transform: translateX(4px);
+		}
 	}
 
 	.field {
@@ -210,25 +298,28 @@
 
 	.input-wrapper input {
 		width: 100%;
-		background: #1a1a1a;
-		border: 1px solid rgba(255, 255, 255, 0.1);
-		border-radius: 12px;
-		padding: 0.85rem 3rem 0.85rem 2.75rem;
-		color: #fff;
-		font-size: 0.95rem;
+		box-sizing: border-box;
+		background: #141722;
+		border: 1px solid #232838;
+		border-radius: 6px;
+		padding: 0.75rem 2.75rem 0.75rem 2.6rem;
+		color: #ffffff;
+		font-size: 0.9rem;
 		font-family: inherit;
 		outline: none;
-		transition: border-color 0.2s;
+		transition: border-color 0.15s;
 	}
 
-	.input-wrapper input::placeholder { color: rgba(255, 255, 255, 0.2); }
+	.input-wrapper input::placeholder {
+		color: #555d72;
+	}
 
 	.input-wrapper input:focus {
-		border-color: rgba(182, 145, 76, 0.6);
+		border-color: #b6914c;
 	}
 
 	.input-wrapper input:hover:not(:focus) {
-		border-color: rgba(255, 255, 255, 0.18);
+		border-color: #343c52;
 	}
 
 	.toggle-password {
@@ -237,24 +328,26 @@
 		background: none;
 		border: none;
 		cursor: pointer;
-		color: rgba(255, 255, 255, 0.25);
+		color: #7d8495;
 		display: flex;
 		align-items: center;
 		padding: 0;
-		transition: color 0.2s;
+		transition: color 0.15s;
 	}
 
-	.toggle-password:hover { color: rgba(255, 255, 255, 0.6); }
+	.toggle-password:hover {
+		color: #ffffff;
+	}
 
 	.btn-primary {
 		width: 100%;
 		margin-top: 1rem;
-		padding: 0.9rem;
+		padding: 0.75rem 1rem;
 		border: none;
-		border-radius: 12px;
+		border-radius: 6px;
 		background: #b6914c;
-		color: #000;
-		font-size: 0.95rem;
+		color: #0c0d12;
+		font-size: 0.9rem;
 		font-weight: 700;
 		font-family: inherit;
 		cursor: pointer;
@@ -262,25 +355,34 @@
 		align-items: center;
 		justify-content: center;
 		gap: 0.5rem;
-		transition: opacity 0.2s, transform 0.15s;
+		transition: background 0.15s;
 		letter-spacing: 0.01em;
 	}
 
 	.btn-primary:hover:not(:disabled) {
-		opacity: 0.88;
-		transform: translateY(-1px);
+		background: #c5a05b;
 	}
 
-	.btn-primary:active:not(:disabled) { transform: translateY(0); }
-	.btn-primary:disabled { opacity: 0.4; cursor: not-allowed; }
+	.btn-primary:active:not(:disabled) {
+		transform: translateY(0);
+	}
+	.btn-primary:disabled {
+		opacity: 0.4;
+		cursor: not-allowed;
+	}
 
 	.spinner {
-		width: 15px; height: 15px;
-		border: 2px solid rgba(0,0,0,0.25);
+		width: 15px;
+		height: 15px;
+		border: 2px solid rgba(0, 0, 0, 0.25);
 		border-top-color: #000;
 		border-radius: 50%;
 		animation: spin 0.7s linear infinite;
 	}
 
-	@keyframes spin { to { transform: rotate(360deg); } }
+	@keyframes spin {
+		to {
+			transform: rotate(360deg);
+		}
+	}
 </style>
